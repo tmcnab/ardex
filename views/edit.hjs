@@ -1,0 +1,41 @@
+<div class="row">
+	<aside class="col-md-4">
+		<header class="page-header">
+			<h2>Article Editor</h2>
+		</header>
+		<style scoped>dd:before {
+			content: '→ ';
+		}</style>
+		<dl>
+			<dt>Article Title</dt>
+			<dd>Use the original title.</dd>
+			<br />
+			<dt>Url</dt>
+			<dd>Is this the original source of the material?</dd>
+			<dd>Can it be sourced from earlier on in the news chain?</dd>
+		</dl>
+	</aside>
+	<main class="col-md-8">
+		{{#id}}<form action="/edit/{{id}}" method="post" role="form">{{/id}}
+		{{^id}}<form action="/submit" method="post" role="form">{{/id}}
+			<header class="page-header">
+				<button class="btn btn-primary btn-lg pull-right" type="submit">Save</button> <h2>Article Editor</h2>
+			</header>
+			<div class="form-group">
+				<input type="text" name="title" class="form-control input-lg" placeholder="Article Title" value="{{title}}" required />
+			</div>
+			<div class="form-group">
+				<input type="url" name="url" class="form-control input-lg" placeholder="Article Url" value="{{url}}" required />
+			</div>
+			<div class="form-group">
+				<input type="text" name="tags" class="form-control input-lg" placeholder="Search Tags" value="{{tags}}" required />
+			</div>
+			<div class="form-group">
+				<input type="date" name="published" class="form-control input-lg" value="{{published}}" required />
+			</div>
+			<div class="form-group">
+				<textarea name="content" class="form-control input-lg" rows="20" placeholder="Article Content" required style="resize:vertical">{{content}}</textarea>
+			</div>
+		</form>
+	</main>
+</div>

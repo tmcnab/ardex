@@ -1,0 +1,10 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<header class="page-header">
+			<h2>500 Internal Server Error</h2>
+		</header>
+		<section>
+			<p class="lead">The page or resource you were trying to load failed to do so. This error has been reported to the site administrator.</p>
+		</section>
+	</div>
+</div>

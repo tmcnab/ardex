@@ -1,0 +1,10 @@
+<header class="page-header">
+	<h2>{{article.title}} <small>{{article.ago}}</small></h2>
+	<a class="label label-success" href="{{article.url}}">{{article.host}}</a>
+	{{#article.tags}}
+	<a class="label label-default" href="/?q={{.}}">{{.}}</a>
+	{{/article.tags}}
+</header>
+<section class="lead" style="padding-bottom:50px;">
+	{{{article.content}}}
+</section>

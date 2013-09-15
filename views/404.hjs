@@ -1,0 +1,10 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<header class="page-header">
+			<h2>404 Not Found</h2>
+		</header>
+		<section>
+			<p class="lead">The page or resource you were looking for wasn't found. If you think this is in error please contact the administrator of this ardex.</p>
+		</section>
+	</div>
+</div>

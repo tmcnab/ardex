@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{page_title}} &there4; {{site_title}}</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css"/>
+	<link rel="stylesheet" href="stylesheets/style.css"/>
+</head>
+<body>
+	<form action="/" method="get" role="form" class="well {{#query}}navbar-fixed-top{{/query}} {{^query}}vertical-centered{{/query}}">
+		<div class="input-group">
+			<div class="input-group-btn">
+				<button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown">
+					More <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="/help">Help</a></li>
+					<li><a href="https://github.com/tmcnab/ardex">Project</a></li>
+					<li class="divider"></li>
+					<li><a href="/submit">Submit Article</a></li>
+				</ul>
+			</div>
+			<input class="form-control input-lg" type="text" name="q" placeholder="Search {{site-title}}" x-webkit-speech required value="{{query}}" />
+		</div>
+	</form>
+{{#query}}
+	<div class="container" style="margin-top: 100px; padding-bottom: 50px;">
+	{{#results}}	
+		<p>{{count}} results found from searching {{total}} articles, taking {{duration}} milliseconds total.</p>	
+	{{#results.items}}
+		<article>
+			<h3><a href="/article/{{id}}">{{tit}}</a></h3>
+			<h4><small>
+				{{ago}} on <a href="{{url}}" target="_blank">{{dom}}</a> with {{acc}}% certainty &middot;
+				<a href="/flag/{{id}}">Flag</a>
+				</small>
+			</h4>
+			<p>{{abs}}&hellip;</p>
+		</article>
+	{{/results.items}}
+	{{/results}}
+	{{^results}}
+		<p class="text-center">In {{total}} articles, your query didn't find anything. For more information on how to query, please check this out.</p>
+	{{/results}}
+	</div>
+{{/query}}
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
