@@ -4,6 +4,17 @@ ardex is an article curation app that I've built to learn node. Basically users 
 
 There's still a bunch of stuff to implement, so caveat emptor.
 
+
+### Setup
+
+Ardex requires mongodb and elasticsearch to operate.
+
+* `git clone https://github.com/tmcnab/ardex`
+* `cd ardex`
+* `npm install`
+* `node app`
+
+
 ### Screens
 
 ![Splash Screen](https://raw.github.com/tmcnab/ardex/master/docs/images/Splash.png)
@@ -14,14 +25,7 @@ There's still a bunch of stuff to implement, so caveat emptor.
 
 ![Article Editor](https://raw.github.com/tmcnab/ardex/master/docs/images/Editor.png)
 
-### Setup
 
-Ardex requires mongodb and elasticsearch to operate.
-
-* `git clone https://github.com/tmcnab/ardex`
-* `cd ardex`
-* `npm install`
-* `node app`
 
 ### Notes
 
