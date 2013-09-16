@@ -4,7 +4,7 @@ var _404 = require('./404');
 
 function get (req, res) 
 {
-	res.render('edit', { page_title: 'New Article' });
+	res.render('edit', { page_title: 'New Article', published: new Date().toJSON().slice(0,10) });
 }
 
 function post (req, res) 
